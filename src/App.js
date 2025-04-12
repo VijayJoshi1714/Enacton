@@ -14,7 +14,7 @@ const navigation = [
   { name: "Stores", href: "#", current: true },
 ];
 const userNavigation = [
-  
+
 ];
 
 function classNames(...classes) {
@@ -34,12 +34,12 @@ export default function App() {
                     <div className="flex flex-shrink-0 items-center">
                       <img
                         className="block h-8 w-auto lg:hidden"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1280px-Tailwind_CSS_Logo.svg.png"
                         alt="Your Company"
                       />
                       <img
                         className="hidden h-8 w-auto lg:block"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1280px-Tailwind_CSS_Logo.svg.png"
                         alt="Your Company"
                       />
                     </div>
@@ -205,10 +205,19 @@ export default function App() {
               </h1>
             </div>
           </header>
-          <main className="">
-            <div className="mx-auto grid grid-cols-3 grid-flow-col max-w-7xl sm:px-6 lg:px-8">
-              <Categories className="bg-white shadow-xl min-h-4" />
-              <AllStores className="bg-white shadow-xl col-span-2 min-h-4" />
+          <main>
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="flex gap-6 mt-6">
+                {/* Sidebar */}
+                <div className="w-64 flex-shrink-0">
+                  <Categories className="bg-white shadow-sm rounded-lg p-4" />
+                </div>
+
+                {/* Main Content */}
+                <div className="flex-1">
+                  <AllStores />
+                </div>
+              </div>
             </div>
           </main>
         </div>
